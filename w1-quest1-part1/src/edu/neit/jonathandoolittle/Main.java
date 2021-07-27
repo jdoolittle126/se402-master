@@ -25,57 +25,73 @@ public class Main {
 			String color = gatherInputString(scanner);
 			System.out.println("Enter your duck's eye (This can be up to two characters, such as oo): ");
 			String eye = gatherInputString(scanner);
-			System.out.println("Enter your duck's legs (This can be up to three characters, such as | |): ");
+			System.out.println("Enter your duck's legs (This can be up to two characters larger than the wingspan, such as | |): ");
 			String leg = gatherInputString(scanner);
-			
-			System.out.println(leg);
 
 			Duck customDuck = new Duck(length, color, eye, leg);
-					
-			//testDuck(shortDuck);
-			//testDuck(medDuck);
-			//testDuck(longDuck);
-			//testDuck(tallDuck);
-			testDuck(customDuck);
+		
+			customDuck.display();
 			
+			System.out.println("Press any key to show all features...");
+			
+			scanner.nextLine();
+			
+			// Show some tests
+			testDuck(shortDuck);
+			testDuck(medDuck);
+			testDuck(longDuck);
+			testDuck(tallDuck);
+			testDuck(customDuck);
 			
 		} catch (Exception e) {
 
 			System.out.println("Whoops... An error occured: " + e.getMessage());
 
-		}
+		} 
 		
-
-
 	}
 	
+	/**
+	 * Asks the user for an int until one is provided 
+	 * @param scanner The scanner to use
+	 * @return The interger typed
+	 */
 	private static int gatherInputInt(Scanner scanner) {
 		int value;
 		try {
 			value = scanner.nextInt(); //Try capture only an int
+			if(scanner.hasNextLine()) { //Flush the last input out of the scanner
+				scanner.nextLine();
+			}
+			
 		} catch (InputMismatchException e) {
 			System.out.println("Hmm, that doesn't look quite right. Lets try again: ");
 			scanner.next(); //Flush the last input out of the scanner
 			value = gatherInputInt(scanner); // Recursively ask until the condition is met
 		}
+		// Flush for next read
 		return value;
 	}
 	
+	/**
+	 * Asks the user for a string
+	 * @param scanner The scanner to use
+	 * @return The string
+	 */
 	private static String gatherInputString(Scanner scanner) {
 		return scanner.nextLine();
 	}
-	
 	
 	/**
 	 * Runs all of the output methods for a duck
 	 * @param duck The duck to test
 	 */
 	private static void testDuck(Duck duck) {
-		System.out.println("DISPLAY TEST");
+		System.out.println("## DISPLAY TEST\n");
 		duck.display();
-		System.out.println("FLY TEST");
+		System.out.println("## FLY TEST\n");
 		duck.fly();
-		System.out.println("QUACK TEST");
+		System.out.println("## QUACK TEST\n");
 		duck.quack();
 	}
 

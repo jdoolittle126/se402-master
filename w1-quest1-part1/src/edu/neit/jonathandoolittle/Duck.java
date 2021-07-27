@@ -41,7 +41,7 @@ public class Duck {
 	 * @param wingSpan The wing span as an integer, where the unit is one character. A wing span of 0 is the shortest possible duck
 	 * @param color The color of the duck
 	 * @param eye The character(s) that represent the eyes of the duck. Anything larger than two characters will be truncated
-	 * @param leg The character(s) that represent the legs of the duck. Anything larger than three characters will be truncated
+	 * @param leg The character(s) that represent the legs of the duck. Anything larger than the wingspan plus two characters will be truncated
 	 */
 	public Duck(int wingSpan, String color, String eye, String leg) {
 		setWingSpan(wingSpan);
@@ -93,7 +93,7 @@ public class Duck {
 	}
 	
 	/**
-	 *  @param leg The character(s) that represent the legs of the duck. Anything larger than three characters will be truncated
+	 *  @param leg The character(s) that represent the legs of the duck. Anything larger than the wing span plus two characters will be truncated
 	 */
 	public void setLeg(String leg) {
 		this.leg = leg;
