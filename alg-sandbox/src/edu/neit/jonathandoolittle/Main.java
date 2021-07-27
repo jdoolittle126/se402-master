@@ -9,13 +9,15 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		float[][] test = new float[100000][10000];
+		float[][] test = new float[100000][13000];
 	
 		try {
 			testTime(ArrayDataStressTest.class, "sumUsingMod", test);
 			testTime(ArrayDataStressTest.class, "sumUsingDoubleFor", test);
 			testTime(ArrayDataStressTest.class, "sumUsingModWithoutDivision", test);
 			testTime(ArrayDataStressTest.class, "sumUsingBitwise", test);
+			testTime(ArrayDataStressTest.class, "sumUsingNoDivision", test);
+			testTime(ArrayDataStressTest.class, "sumUsingNoDivisionWithWhile", test); // Winner :)
 		} catch (Exception e) {
 			System.out.println(e.getMessage());
 		}

@@ -17,7 +17,6 @@ public class ArrayDataStressTest {
 
 	}
 
-
 	/**
 	 * Test using default double for
 	 */
@@ -68,6 +67,50 @@ public class ArrayDataStressTest {
 		
 		for(int i = 0; i < l*w ; i++) {
 			total += array[i/w][i & (w-1)];
+		}
+	}
+	
+	/**
+	 * Test w/o using division
+	 */
+	public static void sumUsingNoDivision(float[][] array) {
+		float total = 0.0f;
+		
+		int l = array.length;
+		int w = array[0].length;
+		int r = 0;
+		int c = 0;
+		
+		for(int i = 0; i < l*w ; i++) {
+			total += array[c][r];
+			
+			if(r+1 == w) {
+				c++;
+				r = 0;
+			} else {
+				r++;
+			}
+		}
+	}
+	
+	/**
+	 * Test w/o using division using while
+	 */
+	public static void sumUsingNoDivisionWithWhile(float[][] array) {
+		
+		float total = 0.0f;
+		int l = array.length;
+		int w = array[0].length;
+		int r = 0;
+		int c = 0;
+		
+		while(true) {
+			total += array[c][r];
+			if(++r == w) {
+				if(++c == l) 
+					break;
+				r = 0;
+			}
 		}
 	}
 }
