@@ -1,7 +1,7 @@
 #include <iostream>
 #include <chrono>
 #define ARRAY_WIDTH 10000
-#define ARRAY_HEIGHT 10000
+#define ARRAY_HEIGHT 1000
 
 /**
  * Test using mod

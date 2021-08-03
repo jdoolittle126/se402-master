@@ -9,7 +9,7 @@ public class Main {
 	
 	public static void main(String[] args) {
 		
-		float[][] test = new float[100000][13000];
+		float[][] test = new float[10000][10000];
 	
 		try {
 			testTime(ArrayDataStressTest.class, "sumUsingMod", test);

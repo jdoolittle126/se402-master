@@ -1,4 +1,4 @@
-"E:\Programs\Software\JetBrains Toolbox\apps\CLion\ch-0\211.7628.27\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - MinGW Makefiles" P:\se402-master\alg-sandbox\alg-test-cpp
+"E:\Programs\Software\JetBrains Toolbox\apps\CLion\ch-0\212.4746.93\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" P:\se402-master\alg-sandbox\alg-test-cpp
 -- The C compiler identification is GNU 8.2.0
 -- The CXX compiler identification is GNU 8.2.0
 -- Detecting C compiler ABI info
