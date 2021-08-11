@@ -1,0 +1,3 @@
+[2021-08-10 21:31:39] [INFO    ] We should now be logging to the console and to testing.txt! Lets log some stuff!
+[2021-08-10 21:31:39] [INFO    ] Lets log our logger!
+[2021-08-10 21:31:39] [INFO    ] edu.neit.jonathandoolittle.JLogger@816f27d
